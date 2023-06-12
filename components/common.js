@@ -12,7 +12,8 @@ export const tiers = [
       description: 'The essentials to provide your best work for clients.',
       features: ['5 products', 'Up to 1,000 subscribers', 'Basic analytics', '48-hour support response time'],
       mostPopular: false,
-      priceStripe: {}
+      priceStripe: {},
+      pricePaddle: {}
     },
     {
       name: 'Startup',
@@ -40,6 +41,14 @@ export const tiers = [
           product_id: 'prod_O3WunFd23o8DWJ'
         }
        
+      },
+      pricePaddle: {
+        monthly: {
+          plan_id: 53298
+        },
+        annually: {
+          plan_id: 53298
+        }
       }
     },
     {
@@ -69,6 +78,14 @@ export const tiers = [
           product_id: 'prod_O3WunFd23o8DWJ'
         }
        
+      },
+      pricePaddle: {
+        monthly: {
+          plan_id: 53299
+        },
+        annually: {
+          plan_id: 53299
+        }
       }
     },
   ]
