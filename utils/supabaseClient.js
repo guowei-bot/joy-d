@@ -3,7 +3,7 @@ export async function signInUseSupabase({ supabase }) {
     if(process.env.NEXT_PUBLIC_SANDBOX=='true') {
         redirectTo = 'http://localhost:3000/apps'
     } else {
-        redirectTo = 'http://gosea.com/apps'
+        redirectTo = 'https://go-sea-template.vercel.app/apps'
     }
 
     const { data, error } = await supabase.auth.signInWithOAuth({
