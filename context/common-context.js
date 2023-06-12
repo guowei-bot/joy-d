@@ -5,19 +5,23 @@ import { useSupabase } from "./supabase-context";
 const CommonContext = createContext();
 
 export const CommonProvider = ({ children }) => {
-  const {supabase} = useSupabase()
+  const { supabase } = useSupabase()
   const [showLoginModal, setShowLoginModal] = useState(false)
   // 如果用户刷新页面，那么useConext中的值，是会被充值的
-    const [userData, setUserData] = useState()
-    const [showAuthUI, setShowAuthUI] = useState(false)
-    const [ clickSideBar, setClickSideBar] = useState()
+  const [userData, setUserData] = useState()
+  const [showAuthUI, setShowAuthUI] = useState(false)
+  const [clickSideBar, setClickSideBar] = useState()
   const [showUpgrade, setShowUpgrade] = useState(false)
 
   async function init() {
     const {
       data: { user }
     } = await supabase.auth.getUser();
-    setUserData(user)
+    if (!user) {
+      setShowLoginModal(true)
+    } else {
+      setUserData(user)
+    }
   }
 
   useEffect(() => {

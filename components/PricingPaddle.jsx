@@ -5,7 +5,7 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 import { toast } from "react-toastify";
 import { useSupabase } from '@/context/supabase-context';
 import { frequencies, tiers } from './common';
-
+import { useRouter } from 'next/navigation'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -13,13 +13,14 @@ function classNames(...classes) {
 
 export default function PricingPaddle() {
     const { supabase } = useSupabase()
+    const router = useRouter();
     const [frequency, setFrequency] = useState(frequencies[0])
 
     // https://blog.sethcorker.com/question/how-to-solve-referenceerror-next-js-window-is-not-defined/
     useEffect(() => {
         window.onPaddleSuccess = function () {
             toast.success('Payment successful, thanks')
-            setPaddleChangeTime(Date.now())
+            router.push('/apps/paddle-subscription')
         };
 
         // paddle支付页面被关闭

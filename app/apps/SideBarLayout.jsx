@@ -28,7 +28,8 @@ const _navigation = [
 ]
 
 const userNavigation = [
-    { name: 'Subscription', href: '/apps/subscription' },
+    { name: 'Stripe Subscription', href: '/apps/subscription' },
+    { name: 'Paddle Subscription', href: '/apps/paddle-subscription' },
     { name: 'Sign out', href: '#' },
 ]
 
