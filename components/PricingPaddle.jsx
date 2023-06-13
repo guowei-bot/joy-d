@@ -36,7 +36,7 @@ export default function PricingPaddle() {
         } = await supabase.auth.getUser();
 
         if (!user) {
-            toast.error('Please login to ProSEOAI first')
+            toast.error('Please login to Go Sea first')
             return
         }
 
