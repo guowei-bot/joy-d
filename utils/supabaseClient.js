@@ -3,7 +3,7 @@ export async function signInUseSupabase({ supabase }) {
     if(process.env.NEXT_PUBLIC_SANDBOX=='true') {
         redirectTo = 'http://localhost:3000/apps'
     } else {
-        redirectTo = 'https://joy-demo.vercel.app/apps'
+        redirectTo = 'https://joy-d.vercel.app/apps'
        //redirectTo = 'http://zhouguowei.com/apps'
     }
 
