@@ -18,7 +18,6 @@ export default function Example() {
         <div className="px-4 py-5 sm:p-6">
           <h3 className="text-base font-semibold leading-6 text-gray-900">DELETE your email</h3>
           <div className="mt-2 max-w-xl text-sm text-gray-500">
-            <p>Change the email address you want associated with your account.</p>
           </div>
           <form className="mt-5 sm:flex sm:items-center">
             <div className="w-full sm:max-w-xs">
